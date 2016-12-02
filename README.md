@@ -1,6 +1,6 @@
 # angular-webp
 
-Make sure that webp supported by your server, this is an demo of [QiNiu CDN](http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html#introduction).
+Make sure that webp supported by your server, this is an demo of [QiNiu CDN](http://developer.qiniu.com/code/v6/api/kodo-api/image/imagemogr2.html#imagemogr2-specification).
 
 ``` javascript
 angular.module('app').config(config)
