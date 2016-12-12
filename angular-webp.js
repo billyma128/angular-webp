@@ -47,25 +47,27 @@
   iSrc.$inject = ['webPConfig', 'webPService']
   function iSrc(webPConfig, webPService) {
     // Usage:
-    // <img i-src="img_url" alt="xxx">
+    // <img i-src="img_url" thumbnail="/thumbnail/750x500" alt="xxx">
     // Creates:
     // angular.module('app', ['angular-webp'])
     var directive = {
       link: link,
       restrict: 'A',
       scope: {
-        iSrc: '='
+        iSrc: '=',
+        thumbnail: '@'
       }
     }
     return directive
 
     function link(scope, element, attrs) {
+      if (!scope.seeSrc) return;
       var url_to_identify = webPConfig.url_to_identify
       var url_prefix = webPConfig.url_prefix
       var format_rule = webPConfig.format_rule
 
       webPService.webPSupport().then(function (hasWebP) {
-        if (scope.iSrc.indexOf('http') > -1) {
+        if (~scope.iSrc.indexOf('http')) {
           if (hasWebP && (scope.iSrc.indexOf(url_to_identify) > -1)) {
             attrs.$set('src', scope.iSrc + format_rule)
           }
