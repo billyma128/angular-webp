@@ -31,7 +31,7 @@ _ Initial release.
   - format rule provided by your server, append to the src
 
 <a name="0.2.0"></a>
-# [0.2.0](https://github.com/KennethMa/angular-webp/compare/0.1.0...0.2.0)
+## [0.2.0](https://github.com/KennethMa/angular-webp/compare/0.1.0...0.2.0)
 
 ### Features
 - **thumbnail**
